@@ -5,6 +5,7 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+
 }
 
 @media (prefers-color-scheme: dark) {
@@ -17,9 +18,29 @@
 body {
   color: var(--foreground);
   background: var(--background);
-  @apply flex flex-col min-h-dvh;
+  @apply flex flex-col min-h-dvh select-none;
 }
 
 main {
   @apply flex-1
+}
+
+
+::-webkit-scrollbar {
+  @apply w-3
+}
+
+
+::-webkit-scrollbar-track {
+  @apply bg-black;
+}
+
+
+::-webkit-scrollbar-thumb {
+  @apply bg-wit-600
+}
+
+
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-wit-500 cursor-n-resize
 }
