@@ -17,5 +17,9 @@
 body {
   color: var(--foreground);
   background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  @apply flex flex-col min-h-dvh;
+}
+
+main {
+  @apply flex-1
 }
