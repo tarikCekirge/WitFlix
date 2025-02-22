@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { bebasNeue, roboto } from "@/app/ui/fonts"
+import { roboto } from "@/app/ui/fonts"
 import "./globals.css";
 import Header from "./ui/components/Header";
 import Footer from "./ui/components/Footer";

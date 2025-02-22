@@ -1,6 +1,5 @@
 import { fetchMovieById } from "@/data/services";
 import { bebasNeue } from "../ui/fonts";
-import Link from "next/link";
 import { Genre, Movie } from "@/types";
 import Image from "next/image";
 import { notFound } from "next/navigation";
