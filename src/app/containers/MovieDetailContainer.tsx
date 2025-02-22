@@ -3,15 +3,16 @@ import { bebasNeue } from "../ui/fonts";
 import Link from "next/link";
 import { Genre, Movie } from "@/types";
 import Image from "next/image";
+import { notFound } from "next/navigation";
 
 
 
 export default async function MovieDetailContainer({ slug }: { slug: number }) {
     const movie: Movie = await fetchMovieById(slug);
     console.log(movie);
-
+    if (!movie) notFound();
     return (
-        <section className="py-6">
+        <section className="pb-6">
             <div className="container">
                 <div className="rounded-lg overflow-hidden mb-6">
                     <Image width="1416"
@@ -40,13 +41,13 @@ export default async function MovieDetailContainer({ slug }: { slug: number }) {
                     <div>
                         <h3 className={`${bebasNeue.className} text-lg text-white inline-block mr-2`}>Categories:</h3>
                         {movie.genres.map((genre: Genre) => (
-                            <Link
+                            <span
                                 key={genre.id}
-                                href={`/genre/${genre.name.toLowerCase().replace(/\s+/g, "-")}`}
-                                className="text-[#eee] hover:text-wit-500  mr-3"
+
+                                className="text-[#eee] mr-3"
                             >
                                 {genre.name}
-                            </Link>
+                            </span>
                         ))}
                     </div>
                 </div>

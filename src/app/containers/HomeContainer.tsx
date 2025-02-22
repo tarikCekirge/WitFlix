@@ -7,7 +7,7 @@ export default async function HomeContainer() {
     return (
         <div className="container">
             <Hero />
-            <CardBlock type="movies" results={trendingMovies} />
+            <CardBlock results={trendingMovies} />
         </div>
     );
 }
