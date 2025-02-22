@@ -5,6 +5,7 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  scroll-padding: 0;
 
 }
 
@@ -43,4 +44,16 @@ main {
 
 ::-webkit-scrollbar-thumb:hover {
   @apply bg-wit-500 cursor-n-resize
+}
+
+.black-grad {
+  background: rgb(0, 0, 0);
+  background: -moz-linear-gradient(0deg, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0.5746673669467788) 35%, rgba(0, 0, 0, 0) 70%);
+  background: -webkit-linear-gradient(0deg, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0.5746673669467788) 35%, rgba(0, 0, 0, 0) 70%);
+  background: linear-gradient(0deg, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0.5746673669467788) 35%, rgba(0, 0, 0, 0) 70%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#000000", endColorstr="#000000", GradientType=1);
+}
+
+main:has(.not-found) {
+  @apply flex items-center justify-center
 }

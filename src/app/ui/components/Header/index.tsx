@@ -15,10 +15,8 @@ export default function Header() {
           <SiteLogo url="/" size={148} />
           <div className="space-x-4 text-[#eee] child-hover:text-wit-500 child:transition-colors">
             { }
-            <Link href={{ pathname: '/topic1' }}>Topic 1</Link>
-            <Link href={{ pathname: '/topic2' }}>Topic 2</Link>
-            <Link href={{ pathname: '/topic3' }}>Topic 3</Link>
-            <Link href={{ pathname: '/topic3' }}>Topic 4</Link>
+            <Link href={{ pathname: '/movies' }}>Movies</Link>
+            <Link href={{ pathname: '/tv' }}>Tv</Link>
           </div>
           <div className="flex items-center gap-3">
             <Search />
