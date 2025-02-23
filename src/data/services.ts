@@ -59,3 +59,22 @@ export const fetchTvById = async (id: number) => {
   const url = `${BASE_URL}/tv/${id}`;
   return await fetchData(url);
 };
+
+export const fetchSearch = async (query: any) => {
+  const url = `${BASE_URL}/search/multi?query=${encodeURIComponent(
+    query
+  )}&include_adult=false`;
+
+  try {
+    const data = await fetchData(url);
+    const filteredResults =
+      data.results?.filter(
+        (item: any) => item.media_type === "movie" || item.media_type === "tv"
+      ) || [];
+
+    return filteredResults;
+  } catch (error) {
+    console.error("Error fetching search results:", error);
+    return [];
+  }
+};

@@ -14,6 +14,7 @@ export default function Search() {
     const handleSearch = () => {
         if (searchQuery.length >= 3) {
             router.push(`/search?q=${encodeURIComponent(searchQuery)}`);
+            setSearchQuery("");
         }
     };
 
@@ -26,6 +27,7 @@ export default function Search() {
                 },
             )}>
                 <input
+                    value={searchQuery}
                     onChange={handleInputChange}
                     type="text"
                     className="bg-transparent text-sm placeholder:text-sm outline-none text-[#eee] flex-1"

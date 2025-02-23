@@ -169,3 +169,17 @@ export interface TVShow {
   vote_average: number;
   vote_count: number;
 }
+
+export interface SearchResult {
+  id: number;
+  title?: string;
+  name?: string;
+  original_title?: string;
+  original_name?: string;
+  overview: string;
+  poster_path: string;
+  media_type: "movie" | "tv";
+  vote_average: number;
+  release_date?: string;
+  first_air_date?: string;
+}
