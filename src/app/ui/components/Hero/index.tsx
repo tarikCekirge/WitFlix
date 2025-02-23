@@ -1,16 +1,30 @@
 import PlayButton from "../../atoms/PlayButton";
 
-
-
-interface HeroProps {
-    trends: any[];
+// Define a type for the trend object
+interface Trend {
+    id: number;
+    backdrop_path: string;
+    name?: string;
+    title?: string;
+    overview: string;
+    media_type: "movie" | "tv";
 }
+
+// Update HeroProps interface to use Trend type
+interface HeroProps {
+    trends: Trend[];
+}
+
 export default function Hero({ trends }: HeroProps) {
-    const randomTrend = Math.floor(Math.random() * trends.length)
-    const trend = trends[randomTrend]
-    console.log(trend)
+    const randomTrend = Math.floor(Math.random() * trends.length);
+    const trend = trends[randomTrend];
+    console.log(trend);
+
     return (
-        <div className="py-16 md:py-32 lg:py-48 bg-black px-6 lg:px-12 rounded-xl overflow-hidden bg-cover bg-center bg-no-repeat" style={{ backgroundImage: `url(https://image.tmdb.org/t/p/w500${trend.backdrop_path})` }}>
+        <div
+            className="py-16 md:py-32 lg:py-48 bg-black px-6 lg:px-12 rounded-xl overflow-hidden bg-cover bg-center bg-no-repeat"
+            style={{ backgroundImage: `url(https://image.tmdb.org/t/p/w500${trend.backdrop_path})` }}
+        >
             <h1 className="text-3xl lg:text-5xl font-[500] mb-3">{trend.name || trend.title}</h1>
             <div className="lg:w-1/2">
                 <p className="line-clamp-3">{trend.overview}</p>
@@ -22,8 +36,7 @@ export default function Hero({ trends }: HeroProps) {
                         ? <PlayButton size="base" url={`movies/${trend.id}`} />
                         : <PlayButton size="base" url={`tv/${trend.id}`} />
                 }
-
             </div>
         </div>
-    )
+    );
 }
