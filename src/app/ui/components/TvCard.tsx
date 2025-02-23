@@ -4,7 +4,7 @@ import PlayButton from "../atoms/PlayButton";
 interface TvCardProps {
     id: number,
     name: string;
-    backdrop: string,
+    backdrop: string | any,
     vote?: number
 
 
@@ -18,7 +18,7 @@ export default function TvCard({
 }: TvCardProps) {
     return (
         <article
-            className="relative isolate group  py-4 px-6 rounded-lg bg-black overflow-hidden aspect-[4/3] flex flex-col items-start justify-end bg-center bg-cover" >
+            className="relative isolate group min-w-[360px]  py-4 px-6 rounded-lg bg-black overflow-hidden aspect-[4/3] flex flex-col items-start justify-end bg-center bg-cover" >
             <h2 className="text-xl font-[700] mb-2">{name}</h2>
             <div className="flex gap-2 items-center mb-2 ">
                 <span className="text-xs px-1.5 pt-1.5 pb-0.5 leading-none border rounded-sm">

@@ -1,9 +1,9 @@
-import MovieDetailContainer from "@/app/containers/MovieDetailContainer";
+import TvDetailContainer from "@/app/containers/TvDetailContainer";
 
-export default async function MovieDetail({ params }: { params: Promise<{ slug: number }> }) {
+export default async function TvDetail({ params }: { params: Promise<{ slug: number }> }) {
     const { slug } = await params;
     console.log(slug)
     return (
-        <MovieDetailContainer slug={slug} />
+        <TvDetailContainer slug={slug} />
     );
 }

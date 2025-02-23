@@ -18,8 +18,9 @@ export default function Header() {
             <Link href={{ pathname: '/movies' }}>Movies</Link>
             <Link href={{ pathname: '/tv' }}>Tv</Link>
           </div>
+
           <div className="flex items-center gap-3">
-            <Search />
+            <div className="hidden md:block"> <Search /></div>
             <FaBell className="size-5" />
             <Link href="https://www.linkedin.com/in/tarikcekirge/" target="_blank">
               <div className="size-7 overflow-hidden bg-slate-400 rounded-full">
@@ -28,6 +29,7 @@ export default function Header() {
             </Link>
           </div>
         </nav>
+        <div className=" md:hidden order-last flex-1 md:flex-auto mb-4"><Search /></div>
       </div>
     </header>
   );

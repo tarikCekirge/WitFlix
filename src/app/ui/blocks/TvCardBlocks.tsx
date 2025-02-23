@@ -1,8 +1,8 @@
-import { TvShow } from "@/types";
+import { TVShow } from "@/types";
 import TvCard from "../components/TvCard";
 
 interface CardBlockProps {
-    results: TvShow[];
+    results: TVShow[];
 }
 
 export default function TvCardBlock({ results }: CardBlockProps) {

@@ -33,13 +33,29 @@ export const fetchTvCategories = async () => {
   return await fetchData(url);
 };
 
+// All Trends
+export const fecthAllTrends = async () => {
+  const url = `${BASE_URL}/trending/all/day?language=en-US`;
+  return await fetchData(url);
+};
+
 // Trending Movies
 export const fetchTrendingMovies = async () => {
   const url = `${BASE_URL}/trending/movie/week`;
   return await fetchData(url);
 };
 
+// Trending Movies
+export const fetchTrendingTv = async () => {
+  const url = `${BASE_URL}/trending/tv/day?language=en-US`;
+  return await fetchData(url);
+};
+
 export const fetchMovieById = async (id: number) => {
   const url = `${BASE_URL}/movie/${id}`;
+  return await fetchData(url);
+};
+export const fetchTvById = async (id: number) => {
+  const url = `${BASE_URL}/tv/${id}`;
   return await fetchData(url);
 };

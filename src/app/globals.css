@@ -43,7 +43,7 @@ main {
 
 
 ::-webkit-scrollbar-thumb:hover {
-  @apply bg-wit-500 cursor-n-resize
+  @apply bg-wit-500
 }
 
 .black-grad {

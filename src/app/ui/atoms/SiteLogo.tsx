@@ -6,7 +6,7 @@ import type { Logo } from "@/types";
 
 export default function SiteLogo({ url, size }: Logo) {
     return (
-        <Link href={url}>
+        <Link href={url} className="min-w-[70px] max-w-[70px] md:max-w-fit">
             <Image alt="witflix" src={logo} width={size} />
         </Link>
     );

@@ -8,7 +8,6 @@ import { notFound } from "next/navigation";
 
 export default async function MovieDetailContainer({ slug }: { slug: number }) {
     const movie: Movie = await fetchMovieById(slug);
-    console.log(movie);
     if (!movie) notFound();
     return (
         <section className="pb-6">
