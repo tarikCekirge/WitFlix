@@ -3,6 +3,8 @@ import TvCard from "../components/TvCard";
 
 interface CardBlockProps {
     results: TVShow[];
+    backdrop: string | undefined;
+
 }
 
 export default function TvCardBlock({ results }: CardBlockProps) {

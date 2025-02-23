@@ -4,7 +4,7 @@ import PlayButton from "../atoms/PlayButton";
 interface TvCardProps {
     id: number;
     name: string;
-    backdrop: string;
+    backdrop: string | undefined;
     vote?: number;
 }
 

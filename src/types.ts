@@ -136,7 +136,8 @@ export interface Season {
 
 export interface TVShow {
   adult: boolean;
-  backdrop_path: string | null;
+  backdrop_path?: string | undefined;
+  backdrop?: string | undefined;
   created_by: Creator[];
   episode_run_time: number[];
   first_air_date: string;
