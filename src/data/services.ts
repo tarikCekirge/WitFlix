@@ -1,3 +1,5 @@
+import { SearchResult } from "@/types";
+
 const BASE_URL = process.env.API_URL;
 const API_KEY = process.env.API_KEY;
 
@@ -60,7 +62,7 @@ export const fetchTvById = async (id: number) => {
   return await fetchData(url);
 };
 
-export const fetchSearch = async (query: any) => {
+export const fetchSearch = async (query: string) => {
   const url = `${BASE_URL}/search/multi?query=${encodeURIComponent(
     query
   )}&include_adult=false`;
@@ -69,7 +71,8 @@ export const fetchSearch = async (query: any) => {
     const data = await fetchData(url);
     const filteredResults =
       data.results?.filter(
-        (item: any) => item.media_type === "movie" || item.media_type === "tv"
+        (item: SearchResult) =>
+          item.media_type === "movie" || item.media_type === "tv"
       ) || [];
 
     return filteredResults;
