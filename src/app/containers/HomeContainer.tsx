@@ -1,6 +1,4 @@
-import CardBlock from "../ui/blocks/MovieCardBlocks";
 import MovieCardSlide from "../ui/blocks/MovieCardSlide";
-import TvCardBlock from "../ui/blocks/TvCardBlocks";
 import TvCardSlide from "../ui/blocks/TvCardSlide";
 import Hero from "../ui/components/Hero";
 import { fecthAllTrends, fetchTrendingMovies, fetchTrendingTv } from "@/data/services";
